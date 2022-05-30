@@ -1,0 +1,2017 @@
+<?xml version="1.0" ?>
+<robot name="14dofbiped" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find 14dofbiped_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find 14dofbiped_description)/urdf/14dofbiped.trans" />
+<xacro:include filename="$(find 14dofbiped_description)/urdf/14dofbiped.gazebo" />
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02318877668003504 -0.13447652088453899 0.4929545200717089"/>
+    <mass value="0.18168333670322537"/>
+    <inertia ixx="6e-05" ixy="0.0" ixz="-0.0" iyy="0.000194" iyz="0.0" izz="0.000251"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pelvis_pitch_plate_3_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.01006027959867472 4.791154612215909e-07 0.025556542467676857"/>
+    <mass value="0.11484166999818798"/>
+    <inertia ixx="2.7e-05" ixy="0.0" ixz="0.0" iyy="3.4e-05" iyz="0.0" izz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.051091 0.154477 -0.497955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_pitch_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.051091 0.154477 -0.497955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_pitch_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pelvis_pitch_plate_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00999962954687044 -0.0017831886554025705 0.0212858283622121"/>
+    <mass value="0.05691428713082504"/>
+    <inertia ixx="1.6e-05" ixy="0.0" ixz="-0.0" iyy="2e-05" iyz="1e-06" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.031091 0.114477 -0.497955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_pitch_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.031091 0.114477 -0.497955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_pitch_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnPelvis_Pitch_VSupp_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531806626721e-07 4.791154284006227e-07 -0.0300004799282913"/>
+    <mass value="0.04307154359428364"/>
+    <inertia ixx="1.3e-05" ixy="0.0" ixz="0.0" iyy="1.3e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.031091 0.114477 -0.487955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Pitch_VSupp_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.031091 0.114477 -0.487955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Pitch_VSupp_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnPelvis_Pitch_VSupp_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531811310474e-07 4.791154285532784e-07 -0.030000479928291246"/>
+    <mass value="0.04307154359428364"/>
+    <inertia ixx="1.3e-05" ixy="0.0" ixz="-0.0" iyy="1.3e-05" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.031091 0.154477 -0.487955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Pitch_VSupp_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.031091 0.154477 -0.487955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Pitch_VSupp_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnPelvis_Pitch_VSupp_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7045318067654986e-07 4.79115429163901e-07 -0.008500479928291671"/>
+    <mass value="0.012203604018380361"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.019909 0.114477 -0.487955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Pitch_VSupp_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.019909 0.114477 -0.487955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Pitch_VSupp_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnPelvis_Pitch_VSupp_2_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.70453181158803e-07 4.79115429163901e-07 -0.008500479928291615"/>
+    <mass value="0.012203604018380361"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="-0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.019909 0.154477 -0.487955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Pitch_VSupp_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.019909 0.154477 -0.487955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Pitch_VSupp_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnnPelvis_Yaw_Plate_3_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.008296665806454382 0.020000479115344444 -0.006338478417664939"/>
+    <mass value="0.07776590207058261"/>
+    <inertia ixx="1.8e-05" ixy="0.0" ixz="1e-06" iyy="1.2e-05" iyz="-0.0" izz="2.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.019909 0.154477 -0.470955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnnPelvis_Yaw_Plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.019909 0.154477 -0.470955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnnPelvis_Yaw_Plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnPelvis_Yaw_VSupp_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.70453180741602e-07 4.79115428581034e-07 -0.01650047992829129"/>
+    <mass value="0.023689348976855998"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="2e-06" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.005591 0.114477 -0.460955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Yaw_VSupp_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.005591 0.114477 -0.460955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Yaw_VSupp_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnPelvis_Yaw_VSupp_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531811501294e-07 4.791154286087895e-07 -0.016500479928291067"/>
+    <mass value="0.023689348976855998"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.005591 0.154477 -0.460955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Yaw_VSupp_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.005591 0.154477 -0.460955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnPelvis_Yaw_VSupp_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnnPelvis_Yaw_Plate_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.003667503841724769 -0.01999952088453974 -0.004913617578357343"/>
+    <mass value="0.18446544600069992"/>
+    <inertia ixx="3.6e-05" ixy="-0.0" ixz="0.0" iyy="4.6e-05" iyz="-0.0" izz="7.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.031091 0.114477 -0.427955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnnPelvis_Yaw_Plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.031091 0.114477 -0.427955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnnPelvis_Yaw_Plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pelvis_roll_plate_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.01962559167925817 4.791154606109682e-07 -0.005160351986917167"/>
+    <mass value="0.10022453115864247"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="0.000111" iyz="-0.0" izz="0.000114"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.031091 0.134477 -0.417955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.031091 0.134477 -0.417955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pelvis_roll_plate_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531809298195e-07 0.010000491168460884 -0.012933060728343326"/>
+    <mass value="0.04423185712386257"/>
+    <inertia ixx="6e-06" ixy="-0.0" ixz="0.0" iyy="5e-06" iyz="0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.033409 0.144477 -0.407955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.033409 0.144477 -0.407955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pelvis_roll_plate_3_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.6920254121303175e-07 0.010000479115423344 -0.015401330629273124"/>
+    <mass value="0.056048194106726935"/>
+    <inertia ixx="9e-06" ixy="0.0" ixz="-0.0" iyy="7e-06" iyz="-0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.056591 0.144477 -0.407955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.056591 0.144477 -0.407955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pelvis_roll_vplate_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0013252563478310803 4.791154611660797e-07 0.0392049366766134"/>
+    <mass value="0.16982022205939382"/>
+    <inertia ixx="0.000178" ixy="-0.0" ixz="-3e-06" iyy="0.000144" iyz="-0.0" izz="3.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.038409 0.134477 -0.377955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_vplate_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.038409 0.134477 -0.377955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_vplate_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pelvis_base_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.003989522033772092 0.015000479115461346 0.00545605919569464"/>
+    <mass value="0.18644454306854363"/>
+    <inertia ixx="0.000739" ixy="-0.0" ixz="-1e-06" iyy="7e-06" iyz="0.0" izz="0.000735"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.038409 0.149477 -0.456285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_base_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.038409 0.149477 -0.456285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_base_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nthigh_yaw_plate_3_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.01877993944650927 -0.014999520884536315 -0.0014288477548424772"/>
+    <mass value="0.09834833074328206"/>
+    <inertia ixx="2.3e-05" ixy="0.0" ixz="2e-06" iyy="2.1e-05" iyz="0.0" izz="4.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.033409 0.044477 -0.456285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.033409 0.044477 -0.456285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nthigh_yaw_vsupport_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531959429838e-07 4.791154606942349e-07 -0.011500479928291396"/>
+    <mass value="0.016510758377808587"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.007591 0.039477 -0.451285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_vsupport_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.007591 0.039477 -0.451285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_vsupport_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nthigh_yaw_vsupport_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531962812549e-07 4.791154607219905e-07 -0.011500479928291285"/>
+    <mass value="0.016510758377808587"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1e-06" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.007591 0.079477 -0.451285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_vsupport_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.007591 0.079477 -0.451285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_vsupport_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nthigh_yaw_plate_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.027088762912194725 -0.019999520884541454 -0.006149337588086723"/>
+    <mass value="0.15421813219914912"/>
+    <inertia ixx="3.3e-05" ixy="-0.0" ixz="-0.0" iyy="6.4e-05" iyz="0.0" izz="9.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.007591 0.039477 -0.428285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.007591 0.039477 -0.428285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_roll_plate_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0025176089178576173 4.791154602501457e-07 -0.0051721473170064924"/>
+    <mass value="0.09333806636840061"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="8.9e-05" iyz="0.0" izz="9.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.033591 0.059477 -0.418285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.033591 0.059477 -0.418285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_roll_plate_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7045317994276183e-07 -0.009999532937539253 -0.012933060728343937"/>
+    <mass value="0.04423185712386257"/>
+    <inertia ixx="6e-06" ixy="-0.0" ixz="-0.0" iyy="5e-06" iyz="-0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009909 0.049477 -0.408285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009909 0.049477 -0.408285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_roll_plate_3_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.717038195710787e-07 -0.009999520884503697 -0.015401330629273902"/>
+    <mass value="0.056048194106726935"/>
+    <inertia ixx="9e-06" ixy="-0.0" ixz="0.0" iyy="7e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.072091 0.049477 -0.408285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.072091 0.049477 -0.408285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnThigh_Pitch_Plate_4_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0019633101393883457 4.791154006311693e-07 -0.005170019010140359"/>
+    <mass value="0.05835742183753847"/>
+    <inertia ixx="2.5e-05" ixy="-0.0" ixz="0.0" iyy="8e-06" iyz="0.0" izz="1.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.014909 0.059477 -0.378285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_4_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.014909 0.059477 -0.378285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_4_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnThigh_Pitch_Plate_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.049999605520594514 -0.0010914157175790362 -0.0052360650746036685"/>
+    <mass value="0.10547325123650075"/>
+    <inertia ixx="4e-06" ixy="0.0" ixz="0.0" iyy="0.000101" iyz="0.0" izz="9.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.014909 0.088477 -0.383285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.014909 0.088477 -0.383285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnThigh_Pitch_Plate_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04999959989677203 0.00121606501958927 -0.005206921627324446"/>
+    <mass value="0.09358089302590179"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="-0.0" iyy="9.6e-05" iyz="-0.0" izz="9.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.014909 0.030477 -0.383285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.014909 0.030477 -0.383285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnThigh_Pitch_Plate_3_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0009084194258474204 -0.02899952088446413 -0.004999901740467216"/>
+    <mass value="0.05012711220153427"/>
+    <inertia ixx="1.7e-05" ixy="0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="1.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.085091 0.030477 -0.383078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.085091 0.030477 -0.383078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee_pitch_support_plate_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.616065741215979e-07 0.0004010396362698343 -0.07490169876875069"/>
+    <mass value="0.2897848951181875"/>
+    <inertia ixx="0.001076" ixy="-0.0" ixz="-0.0" iyy="0.001118" iyz="-7.5e-05" izz="6.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.035091 0.083477 -0.378078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_support_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.035091 0.083477 -0.378078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_support_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee_pitch_middle_support_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531798057187e-07 0.016000479115459106 9.82595277365661e-08"/>
+    <mass value="0.023719376428564816"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.050091 0.073477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_middle_support_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.050091 0.073477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_middle_support_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee_pitch_middle_support_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531796669408e-07 0.016000479115459487 9.82595278475884e-08"/>
+    <mass value="0.023719376428564816"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.020091 0.073477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_middle_support_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.020091 0.073477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_middle_support_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnknee_pitch_plate_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.015000380804201692 0.006693471941131755 0.0005055347290951473"/>
+    <mass value="0.2476675955551393"/>
+    <inertia ixx="0.000841" ixy="-0.0" ixz="0.0" iyy="0.000876" iyz="4.7e-05" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.050091 0.041477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnknee_pitch_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.050091 0.041477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnknee_pitch_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_pitch_support_plate_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.6160657397588114e-07 0.00040103963626854366 -0.07490169876875116"/>
+    <mass value="0.2897848951181875"/>
+    <inertia ixx="0.001076" ixy="-0.0" ixz="-0.0" iyy="0.001118" iyz="-7.5e-05" izz="6.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.035091 0.083977 -0.211078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_support_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.035091 0.083977 -0.211078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_support_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_pitch_middle_support_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7045317485134843e-07 0.0160004791154578 9.825953212194705e-08"/>
+    <mass value="0.023719376428564816"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.050091 0.073977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_middle_support_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.050091 0.073977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_middle_support_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_pitchplate_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.01500038080420154 0.006693471941130395 0.0005055347290948004"/>
+    <mass value="0.2476675955551393"/>
+    <inertia ixx="0.000841" ixy="-0.0" ixz="0.0" iyy="0.000876" iyz="4.7e-05" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.050091 0.041977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitchplate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.050091 0.041977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitchplate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_pitch_middle_support_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7045317485134843e-07 0.016000479115458183 9.825953198316917e-08"/>
+    <mass value="0.023719376428564816"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.020091 0.073977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_middle_support_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.020091 0.073977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_middle_support_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mankle_right_pitch_plate_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531394907451e-07 -0.002900831126441107 0.004463821586217789"/>
+    <mass value="0.05602666356803361"/>
+    <inertia ixx="7e-06" ixy="-0.0" ixz="-0.0" iyy="1.8e-05" iyz="-0.0" izz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.035091 0.036477 -0.044078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/mankle_right_pitch_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.035091 0.036477 -0.044078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/mankle_right_pitch_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nankle_roll_plate_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00309345172414581 -0.017999520884556724 -0.005031983480142929"/>
+    <mass value="0.054809463260414824"/>
+    <inertia ixx="1e-05" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.012091 0.041477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.012091 0.041477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nankle_roll_plate_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.022914341140817196 4.791154575717327e-07 -0.005041678102190236"/>
+    <mass value="0.0644682010493927"/>
+    <inertia ixx="3e-06" ixy="0.0" ixz="0.0" iyy="1.4e-05" iyz="0.0" izz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.012091 0.077477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.012091 0.077477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nankle_roll_plate_3_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0030975641145094338 -0.017999520884470238 -0.005029506652310216"/>
+    <mass value="0.052093296796578904"/>
+    <inertia ixx="1e-05" ixy="-0.0" ixz="-0.0" iyy="2e-06" iyz="0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.058091 0.041477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.058091 0.041477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mankle_pitch_plate_1_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0031256407923579634 4.791154975258838e-07 -0.004124765620087893"/>
+    <mass value="0.056914287130825386"/>
+    <inertia ixx="2.1e-05" ixy="-0.0" ixz="-1e-06" iyy="1.7e-05" iyz="-0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.004091 0.059477 -0.044078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/mankle_pitch_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.004091 0.059477 -0.044078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/mankle_pitch_plate_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_roll_horiz_plate_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03699962954686011 -0.009999520884542694 -0.004612429793249233"/>
+    <mass value="0.17039956873893689"/>
+    <inertia ixx="1.4e-05" ixy="-0.0" ixz="0.0" iyy="8.5e-05" iyz="0.0" izz="9.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000909 0.049477 -0.018078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_roll_horiz_plate_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000909 0.049477 -0.018078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_roll_horiz_plate_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_vsupport_plate_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.802684728040906e-05 -0.009999520884542944 0.018817746664229782"/>
+    <mass value="0.08221078723051044"/>
+    <inertia ixx="1.6e-05" ixy="-0.0" ixz="-0.0" iyy="1.1e-05" iyz="-0.0" izz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.073091 0.049477 -0.018078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_vsupport_plate_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.073091 0.049477 -0.018078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_vsupport_plate_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="heel_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0074635187694867405 -0.0049995208845427935 -0.004629340711736589"/>
+    <mass value="0.19194455328969093"/>
+    <inertia ixx="0.000109" ixy="-0.0" ixz="-3e-06" iyy="0.000131" iyz="0.0" izz="0.000236"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.036091 0.054477 -0.008078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/heel_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.036091 0.054477 -0.008078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/heel_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="toe_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.030191581156028047 -0.026999530017978585 -0.003864547609220095"/>
+    <mass value="0.2003286085420988"/>
+    <inertia ixx="9.6e-05" ixy="-0.0" ixz="2e-06" iyy="6.2e-05" iyz="0.0" izz="0.000154"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.081091 0.032477 -0.006078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/toe_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.081091 0.032477 -0.006078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/toe_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nthigh_yaw_plate_3_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.018779939446507597 -0.01499952088453646 -0.001428847754841367"/>
+    <mass value="0.09834833074328206"/>
+    <inertia ixx="2.3e-05" ixy="0.0" ixz="2e-06" iyy="2.1e-05" iyz="-0.0" izz="4.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.033409 0.194477 -0.456285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_plate_3_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.033409 0.194477 -0.456285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_plate_3_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nthigh_yaw_vsupport_v1__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7045316532077766e-07 4.791154606387238e-07 -0.011500479928290619"/>
+    <mass value="0.016510758377808587"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.007591 0.189477 -0.451285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_vsupport_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.007591 0.189477 -0.451285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_vsupport_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nthigh_yaw_vsupport_v1__3__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7045316576486687e-07 4.791154605277015e-07 -0.011500479928290563"/>
+    <mass value="0.016510758377808587"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.007591 0.229477 -0.451285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_vsupport_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.007591 0.229477 -0.451285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_vsupport_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nthigh_yaw_plate_1_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.027088762912192997 -0.019999520884541377 -0.006149337588085779"/>
+    <mass value="0.15421813219914912"/>
+    <inertia ixx="3.3e-05" ixy="-0.0" ixz="-0.0" iyy="6.4e-05" iyz="-0.0" izz="9.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.007591 0.189477 -0.428285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.007591 0.189477 -0.428285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nthigh_yaw_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_roll_plate_2_v1__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0025176089178593555 4.79115460166879e-07 -0.005172147317005438"/>
+    <mass value="0.09333806636840061"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="8.9e-05" iyz="-0.0" izz="9.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.033591 0.209477 -0.418285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_2_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.033591 0.209477 -0.418285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_2_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_roll_plate_1_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7045318168095476e-07 -0.00999953293753933 -0.012933060728342716"/>
+    <mass value="0.04423185712386257"/>
+    <inertia ixx="6e-06" ixy="-0.0" ixz="0.0" iyy="5e-06" iyz="-0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009909 0.199477 -0.408285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009909 0.199477 -0.408285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_roll_plate_3_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.717038212780466e-07 0.010000479115496314 -0.015401330629272847"/>
+    <mass value="0.056048194106726935"/>
+    <inertia ixx="9e-06" ixy="0.0" ixz="0.0" iyy="7e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.072091 0.219477 -0.408285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_3_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.072091 0.219477 -0.408285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/thigh_roll_plate_3_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnThigh_Pitch_Plate_4_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.001963310139390129 4.791154006034137e-07 -0.005170019010139193"/>
+    <mass value="0.05835742183753847"/>
+    <inertia ixx="2.5e-05" ixy="-0.0" ixz="0.0" iyy="8e-06" iyz="0.0" izz="1.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.014909 0.209477 -0.378285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_4_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.014909 0.209477 -0.378285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_4_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnThigh_Pitch_Plate_2_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.049999599896769484 -0.001215106788669179 -0.005206881853608736"/>
+    <mass value="0.09358089302590179"/>
+    <inertia ixx="4e-06" ixy="0.0" ixz="0.0" iyy="9.6e-05" iyz="-0.0" izz="9.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.014909 0.238477 -0.383285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.014909 0.238477 -0.383285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnThigh_Pitch_Plate_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04999960552059312 0.0010923739484991757 -0.005177738406329513"/>
+    <mass value="0.10547325123650075"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="-0.0" iyy="0.000101" iyz="0.0" izz="9.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.014909 0.180477 -0.383285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.014909 0.180477 -0.383285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnThigh_Pitch_Plate_3_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0009084194258455747 0.029000479115383143 -0.004999901740465551"/>
+    <mass value="0.05012711220153427"/>
+    <inertia ixx="1.7e-05" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="1.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.085091 0.238477 -0.383078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_3_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.085091 0.238477 -0.383078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnThigh_Pitch_Plate_3_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee_pitch_support_plate_1_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7929978709272394e-07 -0.0004000814053506663 -0.07490169876874947"/>
+    <mass value="0.2897848951181875"/>
+    <inertia ixx="0.001076" ixy="-0.0" ixz="0.0" iyy="0.001118" iyz="7.5e-05" izz="6.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.035091 0.185477 -0.378078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_support_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.035091 0.185477 -0.378078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_support_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee_pitch_middle_support_v1__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7045318129758087e-07 -0.01599952088454054 9.825952906883373e-08"/>
+    <mass value="0.023719376428564816"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.050091 0.195477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_middle_support_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.050091 0.195477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_middle_support_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee_pitch_middle_support_v1__3__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531814051337e-07 -0.015999520884540264 9.825952917985603e-08"/>
+    <mass value="0.023719376428564816"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.020091 0.195477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_middle_support_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.020091 0.195477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/knee_pitch_middle_support_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nnknee_pitch_plate_1_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.015000360102159466 -0.0066925137102127885 0.0005055347290968681"/>
+    <mass value="0.2476675955551393"/>
+    <inertia ixx="0.000841" ixy="-0.0" ixz="-0.0" iyy="0.000876" iyz="-4.7e-05" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.050091 0.227477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnknee_pitch_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.050091 0.227477 -0.291078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nnknee_pitch_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_pitch_support_plate_2_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.792997861212788e-07 -0.00040008140535160996 -0.07490169876874955"/>
+    <mass value="0.2897848951181875"/>
+    <inertia ixx="0.001076" ixy="-0.0" ixz="0.0" iyy="0.001118" iyz="7.5e-05" izz="6.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.035091 0.184977 -0.211078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_support_plate_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.035091 0.184977 -0.211078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_support_plate_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_pitch_middle_support_v1__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.7045317542033773e-07 -0.01599952088454143 9.825953416198185e-08"/>
+    <mass value="0.023719376428564816"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.050091 0.194977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_middle_support_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.050091 0.194977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_middle_support_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_pitch_middle_support_v1__3__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704531754550322e-07 -0.015999520884541152 9.825953424524858e-08"/>
+    <mass value="0.023719376428564816"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.020091 0.194977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_middle_support_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.020091 0.194977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitch_middle_support_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_pitchplate_2_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.01499963989784166 -0.006692513710213899 0.0005055347290972012"/>
+    <mass value="0.2476675955551393"/>
+    <inertia ixx="0.000841" ixy="-0.0" ixz="-0.0" iyy="0.000876" iyz="-4.7e-05" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.020091 0.226977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitchplate_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.020091 0.226977 -0.124078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_pitchplate_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mankle_right_pitch_plate_1_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.704532199819144e-07 0.00290178935735666 0.0044638215862199265"/>
+    <mass value="0.05602666356803361"/>
+    <inertia ixx="7e-06" ixy="-0.0" ixz="0.0" iyy="1.8e-05" iyz="0.0" izz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.035091 0.232477 -0.044078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/mankle_right_pitch_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.035091 0.232477 -0.044078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/mankle_right_pitch_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nankle_roll_plate_1_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0030934517241459347 0.018000479115443807 -0.00503198348014109"/>
+    <mass value="0.054809463260414824"/>
+    <inertia ixx="1e-05" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.012091 0.227477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.012091 0.227477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nankle_roll_plate_2_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.022914341140817446 4.791154580574553e-07 -0.0050416781021888415"/>
+    <mass value="0.0644682010493927"/>
+    <inertia ixx="3e-06" ixy="0.0" ixz="0.0" iyy="1.4e-05" iyz="0.0" izz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.012091 0.191477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.012091 0.191477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_2_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="nankle_roll_plate_3_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.003097564114509184 -0.01799952088461465 -0.004970296828624474"/>
+    <mass value="0.052093296796578904"/>
+    <inertia ixx="1e-05" ixy="0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.058091 0.191477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_3_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.058091 0.191477 -0.049078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/nankle_roll_plate_3_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mankle_pitch_plate_1_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0031256407923579625 4.791154980254841e-07 -0.004124765620086207"/>
+    <mass value="0.056914287130825386"/>
+    <inertia ixx="2.1e-05" ixy="-0.0" ixz="-1e-06" iyy="1.7e-05" iyz="-0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.004091 0.209477 -0.044078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/mankle_pitch_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.004091 0.209477 -0.044078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/mankle_pitch_plate_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_roll_horiz_plate_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.036999629546860105 0.010000479115457872 -0.004612429793247408"/>
+    <mass value="0.17039956873893689"/>
+    <inertia ixx="1.4e-05" ixy="-0.0" ixz="0.0" iyy="8.5e-05" iyz="0.0" izz="9.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000909 0.219477 -0.018078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_roll_horiz_plate_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000909 0.219477 -0.018078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_roll_horiz_plate_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tankle_vsupport_plate_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.802684728002048e-05 -0.009999520884542451 0.018817746664231607"/>
+    <mass value="0.08221078723051044"/>
+    <inertia ixx="1.6e-05" ixy="-0.0" ixz="-0.0" iyy="1.1e-05" iyz="0.0" izz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.073091 0.199477 -0.018078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_vsupport_plate_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.073091 0.199477 -0.018078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/tankle_vsupport_plate_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="heel_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.007463518769486678 -0.00499952088454228 -0.004629340711734471"/>
+    <mass value="0.19194455328969093"/>
+    <inertia ixx="0.000109" ixy="-0.0" ixz="-3e-06" iyy="0.000131" iyz="0.0" izz="0.000236"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.036091 0.204477 -0.008078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/heel_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.036091 0.204477 -0.008078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/heel_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="toe_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.030191581156028213 0.027000469982021935 -0.0038645476092181207"/>
+    <mass value="0.2003286085420988"/>
+    <inertia ixx="9.6e-05" ixy="-0.0" ixz="2e-06" iyy="6.2e-05" iyz="0.0" izz="0.000154"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.081091 0.236477 -0.006078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/toe_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.081091 0.236477 -0.006078"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/toe_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pelvis_roll_vplate_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.005221953265889069 4.791154599170788e-07 0.014774382030528055"/>
+    <mass value="0.17997668950284657"/>
+    <inertia ixx="8.1e-05" ixy="-0.0" ixz="-1e-06" iyy="6e-05" iyz="-0.0" izz="2.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.061591 0.134477 -0.377955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_vplate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.061591 0.134477 -0.377955"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_roll_vplate_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pelvis_base_1_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0039902629401336875 -0.014999520884539846 0.005456059195695084"/>
+    <mass value="0.18644454306854363"/>
+    <inertia ixx="0.000739" ixy="0.0" ixz="1e-06" iyy="7e-06" iyz="-0.0" izz="0.000735"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.067591 0.119477 -0.423285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_base_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.067591 0.119477 -0.423285"/>
+    <geometry>
+      <mesh filename="package://14dofbiped_description/meshes/pelvis_base_1_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin rpy="0 0 0" xyz="0.051091 -0.154477 0.497955"/>
+  <parent link="base_link"/>
+  <child link="pelvis_pitch_plate_3_v1_1"/>
+</joint>
+
+<joint name="Rigid2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.031091 -0.114477 0.497955"/>
+  <parent link="base_link"/>
+  <child link="pelvis_pitch_plate_2_v1_1"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin rpy="0 0 0" xyz="0.031091 -0.114477 0.487955"/>
+  <parent link="base_link"/>
+  <child link="nnPelvis_Pitch_VSupp_v1_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin rpy="0 0 0" xyz="0.031091 -0.154477 0.487955"/>
+  <parent link="base_link"/>
+  <child link="nnPelvis_Pitch_VSupp_v1__1__1"/>
+</joint>
+
+<joint name="Rigid5" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.019909 -0.114477 0.487955"/>
+  <parent link="base_link"/>
+  <child link="nnPelvis_Pitch_VSupp_2_v1_1"/>
+</joint>
+
+<joint name="Rigid6" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.019909 -0.154477 0.487955"/>
+  <parent link="base_link"/>
+  <child link="nnPelvis_Pitch_VSupp_2_v1__1__1"/>
+</joint>
+
+<joint name="Rigid12" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 -0.017"/>
+  <parent link="nnPelvis_Pitch_VSupp_2_v1__1__1"/>
+  <child link="nnnPelvis_Yaw_Plate_3_v1_1"/>
+</joint>
+
+<joint name="Rigid13" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0255 0.04 -0.01"/>
+  <parent link="nnnPelvis_Yaw_Plate_3_v1_1"/>
+  <child link="nnPelvis_Yaw_VSupp_v1_1"/>
+</joint>
+
+<joint name="Rigid14" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0255 0.0 -0.01"/>
+  <parent link="nnnPelvis_Yaw_Plate_3_v1_1"/>
+  <child link="nnPelvis_Yaw_VSupp_v1__1__1"/>
+</joint>
+
+<joint name="Rigid15" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 -0.06"/>
+  <parent link="nnPelvis_Pitch_VSupp_v1_1"/>
+  <child link="nnnPelvis_Yaw_Plate_1_v1_1"/>
+</joint>
+
+<joint name="Rev16" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.02 -0.01"/>
+  <parent link="nnnPelvis_Yaw_Plate_1_v1_1"/>
+  <child link="pelvis_roll_plate_2_v1_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rigid17" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0645 -0.01 -0.01"/>
+  <parent link="pelvis_roll_plate_2_v1_1"/>
+  <child link="pelvis_roll_plate_1_v1_1"/>
+</joint>
+
+<joint name="Rigid18" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0255 -0.01 -0.01"/>
+  <parent link="pelvis_roll_plate_2_v1_1"/>
+  <child link="pelvis_roll_plate_3_v1_1"/>
+</joint>
+
+<joint name="Rev19" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.005 0.01 -0.03"/>
+  <parent link="pelvis_roll_plate_1_v1_1"/>
+  <child link="pelvis_roll_vplate_v1_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid20" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.015 0.07833"/>
+  <parent link="pelvis_roll_vplate_v1_1"/>
+  <child link="pelvis_base_1_v1_1"/>
+</joint>
+
+<joint name="Rigid26" type="fixed">
+  <origin rpy="0 0 0" xyz="0.005 0.105 0.0"/>
+  <parent link="pelvis_base_1_v1_1"/>
+  <child link="nthigh_yaw_plate_3_v1_1"/>
+</joint>
+
+<joint name="Rigid27" type="fixed">
+  <origin rpy="0 0 0" xyz="0.041 0.005 -0.005"/>
+  <parent link="nthigh_yaw_plate_3_v1_1"/>
+  <child link="nthigh_yaw_vsupport_v1_1"/>
+</joint>
+
+<joint name="Rigid28" type="fixed">
+  <origin rpy="0 0 0" xyz="0.041 -0.035 -0.005"/>
+  <parent link="nthigh_yaw_plate_3_v1_1"/>
+  <child link="nthigh_yaw_vsupport_v1__1__1"/>
+</joint>
+
+<joint name="Rigid29" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 -0.023"/>
+  <parent link="nthigh_yaw_vsupport_v1_1"/>
+  <child link="nthigh_yaw_plate_1_v1_1"/>
+</joint>
+
+<joint name="Rev30" type="fixed">
+  <origin rpy="0 0 0" xyz="0.026 -0.02 -0.01"/>
+  <parent link="nthigh_yaw_plate_1_v1_1"/>
+  <child link="thigh_roll_plate_2_v1_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rigid31" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0435 0.01 -0.01"/>
+  <parent link="thigh_roll_plate_2_v1_1"/>
+  <child link="thigh_roll_plate_1_v1_1"/>
+</joint>
+
+<joint name="Rigid32" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0385 0.01 -0.01"/>
+  <parent link="thigh_roll_plate_2_v1_1"/>
+  <child link="thigh_roll_plate_3_v1_1"/>
+</joint>
+
+<joint name="Rev33" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.005 -0.01 -0.03"/>
+  <parent link="thigh_roll_plate_1_v1_1"/>
+  <child link="nnThigh_Pitch_Plate_4_v1_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="Rigid34" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.029 0.005"/>
+  <parent link="nnThigh_Pitch_Plate_4_v1_1"/>
+  <child link="nnThigh_Pitch_Plate_v1_1"/>
+</joint>
+
+<joint name="Rigid35" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.029 0.005"/>
+  <parent link="nnThigh_Pitch_Plate_4_v1_1"/>
+  <child link="nnThigh_Pitch_Plate_2_v1_1"/>
+</joint>
+
+<joint name="Rigid36" type="fixed">
+  <origin rpy="0 0 0" xyz="0.1 0.0 -0.000207"/>
+  <parent link="nnThigh_Pitch_Plate_2_v1_1"/>
+  <child link="nnThigh_Pitch_Plate_3_v1_1"/>
+</joint>
+
+<joint name="Rev37" type="fixed">
+  <origin rpy="0 0 0" xyz="0.05 0.005 -0.005207"/>
+  <parent link="nnThigh_Pitch_Plate_v1_1"/>
+  <child link="knee_pitch_support_plate_1_v1_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rigid38" type="fixed">
+  <origin rpy="0 0 0" xyz="0.015 0.01 -0.087"/>
+  <parent link="knee_pitch_support_plate_1_v1_1"/>
+  <child link="knee_pitch_middle_support_v1_1"/>
+</joint>
+
+<joint name="Rigid39" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.015 0.01 -0.087"/>
+  <parent link="knee_pitch_support_plate_1_v1_1"/>
+  <child link="knee_pitch_middle_support_v1__1__1"/>
+</joint>
+
+<joint name="Rigid40" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.032 0.0"/>
+  <parent link="knee_pitch_middle_support_v1_1"/>
+  <child link="nnknee_pitch_plate_1_v1_1"/>
+</joint>
+
+<joint name="Rev41" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.0005 -0.167"/>
+  <parent link="knee_pitch_support_plate_1_v1_1"/>
+  <child link="tankle_pitch_support_plate_2_v1_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid42" type="fixed">
+  <origin rpy="0 0 0" xyz="0.015 0.01 -0.087"/>
+  <parent link="tankle_pitch_support_plate_2_v1_1"/>
+  <child link="tankle_pitch_middle_support_v1_1"/>
+</joint>
+
+<joint name="Rigid43" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.032 0.0"/>
+  <parent link="tankle_pitch_middle_support_v1_1"/>
+  <child link="tankle_pitchplate_2_v1_1"/>
+</joint>
+
+<joint name="Rigid44" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.015 0.01 -0.087"/>
+  <parent link="tankle_pitch_support_plate_2_v1_1"/>
+  <child link="tankle_pitch_middle_support_v1__1__1"/>
+</joint>
+
+<joint name="Rev45" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.015 0.0055 -0.08"/>
+  <parent link="tankle_pitchplate_2_v1_1"/>
+  <child link="mankle_right_pitch_plate_1_v1_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid46" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.023 -0.005 0.005"/>
+  <parent link="mankle_right_pitch_plate_1_v1_1"/>
+  <child link="nankle_roll_plate_1_v1_1"/>
+</joint>
+
+<joint name="Rigid47" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.036 0.0"/>
+  <parent link="nankle_roll_plate_1_v1_1"/>
+  <child link="nankle_roll_plate_2_v1_1"/>
+</joint>
+
+<joint name="Rigid48" type="fixed">
+  <origin rpy="0 0 0" xyz="0.023 -0.005 0.005"/>
+  <parent link="mankle_right_pitch_plate_1_v1_1"/>
+  <child link="nankle_roll_plate_3_v1_1"/>
+</joint>
+
+<joint name="Rev49" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.008 -0.018 -0.005"/>
+  <parent link="nankle_roll_plate_1_v1_1"/>
+  <child link="mankle_pitch_plate_1_v1_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid50" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.005 0.01 -0.026"/>
+  <parent link="mankle_pitch_plate_1_v1_1"/>
+  <child link="tankle_roll_horiz_plate_v1_1"/>
+</joint>
+
+<joint name="Rigid51" type="fixed">
+  <origin rpy="0 0 0" xyz="0.074 0.0 0.0"/>
+  <parent link="tankle_roll_horiz_plate_v1_1"/>
+  <child link="tankle_vsupport_plate_v1_1"/>
+</joint>
+
+<joint name="Rigid52" type="fixed">
+  <origin rpy="0 0 0" xyz="0.037 -0.005 -0.01"/>
+  <parent link="tankle_roll_horiz_plate_v1_1"/>
+  <child link="heel_v1_1"/>
+</joint>
+
+<joint name="Rev53" type="fixed">
+  <origin rpy="0 0 0" xyz="0.045 0.022 -0.002"/>
+  <parent link="heel_v1_1"/>
+  <child link="toe_v1_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid54" type="fixed">
+  <origin rpy="0 0 0" xyz="0.005 -0.045 0.0"/>
+  <parent link="pelvis_base_1_v1_1"/>
+  <child link="nthigh_yaw_plate_3_v1__1__1"/>
+</joint>
+
+<joint name="Rigid55" type="fixed">
+  <origin rpy="0 0 0" xyz="0.041 0.005 -0.005"/>
+  <parent link="nthigh_yaw_plate_3_v1__1__1"/>
+  <child link="nthigh_yaw_vsupport_v1__2__1"/>
+</joint>
+
+<joint name="Rigid56" type="fixed">
+  <origin rpy="0 0 0" xyz="0.041 -0.035 -0.005"/>
+  <parent link="nthigh_yaw_plate_3_v1__1__1"/>
+  <child link="nthigh_yaw_vsupport_v1__3__1"/>
+</joint>
+
+<joint name="Rigid57" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 -0.023"/>
+  <parent link="nthigh_yaw_vsupport_v1__2__1"/>
+  <child link="nthigh_yaw_plate_1_v1__1__1"/>
+</joint>
+
+<joint name="Rev58" type="fixed">
+  <origin rpy="0 0 0" xyz="0.026 -0.02 -0.01"/>
+  <parent link="nthigh_yaw_plate_1_v1__1__1"/>
+  <child link="thigh_roll_plate_2_v1__2__1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rigid59" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0435 0.01 -0.01"/>
+  <parent link="thigh_roll_plate_2_v1__2__1"/>
+  <child link="thigh_roll_plate_1_v1__1__1"/>
+</joint>
+
+<joint name="Rigid60" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0385 -0.01 -0.01"/>
+  <parent link="thigh_roll_plate_2_v1__2__1"/>
+  <child link="thigh_roll_plate_3_v1__1__1"/>
+</joint>
+
+<joint name="Rev61" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.005 -0.01 -0.03"/>
+  <parent link="thigh_roll_plate_1_v1__1__1"/>
+  <child link="nnThigh_Pitch_Plate_4_v1__1__1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="Rigid62" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.029 0.005"/>
+  <parent link="nnThigh_Pitch_Plate_4_v1__1__1"/>
+  <child link="nnThigh_Pitch_Plate_2_v1__1__1"/>
+</joint>
+
+<joint name="Rigid63" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.029 0.005"/>
+  <parent link="nnThigh_Pitch_Plate_4_v1__1__1"/>
+  <child link="nnThigh_Pitch_Plate_v1__1__1"/>
+</joint>
+
+<joint name="Rigid64" type="fixed">
+  <origin rpy="0 0 0" xyz="0.1 0.0 -0.000207"/>
+  <parent link="nnThigh_Pitch_Plate_2_v1__1__1"/>
+  <child link="nnThigh_Pitch_Plate_3_v1__1__1"/>
+</joint>
+
+<joint name="Rev65" type="fixed">
+  <origin rpy="0 0 0" xyz="0.05 -0.005 -0.005207"/>
+  <parent link="nnThigh_Pitch_Plate_v1__1__1"/>
+  <child link="knee_pitch_support_plate_1_v1__1__1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid66" type="fixed">
+  <origin rpy="0 0 0" xyz="0.015 -0.01 -0.087"/>
+  <parent link="knee_pitch_support_plate_1_v1__1__1"/>
+  <child link="knee_pitch_middle_support_v1__2__1"/>
+</joint>
+
+<joint name="Rigid67" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.015 -0.01 -0.087"/>
+  <parent link="knee_pitch_support_plate_1_v1__1__1"/>
+  <child link="knee_pitch_middle_support_v1__3__1"/>
+</joint>
+
+<joint name="Rigid68" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.032 0.0"/>
+  <parent link="knee_pitch_middle_support_v1__2__1"/>
+  <child link="nnknee_pitch_plate_1_v1__1__1"/>
+</joint>
+
+<joint name="Rev69" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0005 -0.167"/>
+  <parent link="knee_pitch_support_plate_1_v1__1__1"/>
+  <child link="tankle_pitch_support_plate_2_v1__1__1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rigid70" type="fixed">
+  <origin rpy="0 0 0" xyz="0.015 -0.01 -0.087"/>
+  <parent link="tankle_pitch_support_plate_2_v1__1__1"/>
+  <child link="tankle_pitch_middle_support_v1__2__1"/>
+</joint>
+
+<joint name="Rigid71" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.015 -0.01 -0.087"/>
+  <parent link="tankle_pitch_support_plate_2_v1__1__1"/>
+  <child link="tankle_pitch_middle_support_v1__3__1"/>
+</joint>
+
+<joint name="Rigid72" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.032 0.0"/>
+  <parent link="tankle_pitch_middle_support_v1__3__1"/>
+  <child link="tankle_pitchplate_2_v1__1__1"/>
+</joint>
+
+<joint name="Rev73" type="fixed">
+  <origin rpy="0 0 0" xyz="0.015 -0.0055 -0.08"/>
+  <parent link="tankle_pitchplate_2_v1__1__1"/>
+  <child link="mankle_right_pitch_plate_1_v1__1__1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rigid74" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.023 0.005 0.005"/>
+  <parent link="mankle_right_pitch_plate_1_v1__1__1"/>
+  <child link="nankle_roll_plate_1_v1__1__1"/>
+</joint>
+
+<joint name="Rigid75" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.036 0.0"/>
+  <parent link="nankle_roll_plate_1_v1__1__1"/>
+  <child link="nankle_roll_plate_2_v1__1__1"/>
+</joint>
+
+<joint name="Rigid76" type="fixed">
+  <origin rpy="0 0 0" xyz="0.046 0.0 0.0"/>
+  <parent link="nankle_roll_plate_2_v1__1__1"/>
+  <child link="nankle_roll_plate_3_v1__1__1"/>
+</joint>
+
+<joint name="Rev77" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.008 0.018 -0.005"/>
+  <parent link="nankle_roll_plate_1_v1__1__1"/>
+  <child link="mankle_pitch_plate_1_v1__1__1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid78" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.005 -0.01 -0.026"/>
+  <parent link="mankle_pitch_plate_1_v1__1__1"/>
+  <child link="tankle_roll_horiz_plate_v1__1__1"/>
+</joint>
+
+<joint name="Rigid79" type="fixed">
+  <origin rpy="0 0 0" xyz="0.074 0.02 0.0"/>
+  <parent link="tankle_roll_horiz_plate_v1__1__1"/>
+  <child link="tankle_vsupport_plate_v1__1__1"/>
+</joint>
+
+<joint name="Rigid80" type="fixed">
+  <origin rpy="0 0 0" xyz="0.037 0.015 -0.01"/>
+  <parent link="tankle_roll_horiz_plate_v1__1__1"/>
+  <child link="heel_v1__1__1"/>
+</joint>
+
+<joint name="Rev81" type="fixed">
+  <origin rpy="0 0 0" xyz="0.045 -0.032 -0.002"/>
+  <parent link="heel_v1__1__1"/>
+  <child link="toe_v1__1__1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rev82" type="fixed">
+  <origin rpy="0 0 0" xyz="0.005 0.01 -0.03"/>
+  <parent link="pelvis_roll_plate_3_v1_1"/>
+  <child link="pelvis_roll_vplate_2_v1_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid83" type="fixed">
+  <origin rpy="0 0 0" xyz="0.006 0.015 0.04533"/>
+  <parent link="pelvis_roll_vplate_2_v1_1"/>
+  <child link="pelvis_base_1_v1__1__1"/>
+</joint>
+
+</robot>

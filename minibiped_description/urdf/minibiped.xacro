@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<robot name="minibiped" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find minibiped_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find minibiped_description)/urdf/minibiped.trans" />
+<xacro:include filename="$(find minibiped_description)/urdf/minibiped.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.05000000000019037 0.0 0.875"/>
+    <mass value="2.8581305133003325"/>
+    <inertia ixx="0.020769" ixy="0.0" ixz="-0.0" iyy="0.004482" iyz="0.0" izz="0.020769"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-9.915679388683429e-14 -0.029550092615413276 -0.1936276569893436"/>
+    <mass value="2.950849718614352"/>
+    <inertia ixx="0.057929" ixy="-0.0" ixz="0.0" iyy="0.05933" iyz="-0.00106" izz="0.002839"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05 -0.175 -0.875"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/thigh_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05 -0.175 -0.875"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/thigh_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00553971561025169 0.01999989170672259 -0.23982868470758642"/>
+    <mass value="2.0835907133546745"/>
+    <inertia ixx="0.046816" ixy="0.0" ixz="0.002512" iyy="0.048161" iyz="-0.0" izz="0.002105"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05 -0.084996 -0.465"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/leg_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05 -0.084996 -0.465"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/leg_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-9.917761056854602e-14 0.02955009261541322 -0.1936276569893436"/>
+    <mass value="2.950849718614351"/>
+    <inertia ixx="0.057929" ixy="0.0" ixz="0.0" iyy="0.05933" iyz="0.00106" izz="0.002839"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05 0.175 -0.875"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/thigh_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05 0.175 -0.875"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/thigh_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00553971561025169 -0.01999989170672266 -0.23982868470758628"/>
+    <mass value="2.0835907133546745"/>
+    <inertia ixx="0.046816" ixy="-0.0" ixz="0.002512" iyy="0.048161" iyz="0.0" izz="0.002105"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05 0.084996 -0.465"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/leg_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05 0.084996 -0.465"/>
+    <geometry>
+      <mesh filename="package://minibiped_description/meshes/leg_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Thigh_1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.05 0.175 0.875"/>
+  <parent link="base_link"/>
+  <child link="thigh_1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="leg_1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.090004 -0.41"/>
+  <parent link="thigh_1_1"/>
+  <child link="leg_1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="thigh_2" type="continuous">
+  <origin rpy="0 0 0" xyz="0.05 -0.175 0.875"/>
+  <parent link="base_link"/>
+  <child link="thigh_2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="leg_2" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.090004 -0.41"/>
+  <parent link="thigh_2_1"/>
+  <child link="leg_2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+</robot>

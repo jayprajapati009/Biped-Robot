@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="minibiped" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="Thigh_1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Thigh_1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Thigh_1_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="leg_1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="leg_1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="leg_1_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="thigh_2_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="thigh_2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="thigh_2_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="leg_2_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="leg_2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="leg_2_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

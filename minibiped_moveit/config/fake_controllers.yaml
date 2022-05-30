@@ -1,0 +1,11 @@
+controller_list:
+  - name: fake_leg_controller
+    type: $(arg execution_type)
+    joints:
+      - Thigh_1
+      - leg_1
+      - thigh_2
+      - leg_2
+initial:  # Define initial robot poses.
+  - group: leg
+    pose: simple_stand

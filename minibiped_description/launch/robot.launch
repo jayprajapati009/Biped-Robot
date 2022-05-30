@@ -1,0 +1,12 @@
+<launch>
+<param name="robot_description" textfile="$(find minibiped_description)/urdf/minibiped.urdf" />
+<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model minibiped_controller -param minibiped -y -6"/>
+<!-- loads the controllers -->
+<rosparam file="$(find minibiped_description)/launch/controller.yaml" command="load" />
+<node name="controller_spawner" pkg="controller_manager" type="spawner" ns="/minibiped" args="Thigh_1_position_controller leg_1_position_controller thigh_2_position_controller leg_2_position_controller joint_state_controller --shutdown-timeout 3"/> 
+
+<!-- converts joint states to TF transforms -->
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+    <remap from="/joint_states" to="/minibiped/joint_states" />
+</node>
+</launch>

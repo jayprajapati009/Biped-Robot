@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="14dofbiped">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="Legs">
+        <link name="pelvis_pitch_plate_3_v1_1"/>
+        <link name="pelvis_pitch_plate_2_v1_1"/>
+        <link name="nnPelvis_Pitch_VSupp_v1_1"/>
+        <link name="nnnPelvis_Yaw_Plate_1_v1_1"/>
+        <link name="pelvis_roll_plate_2_v1_1"/>
+        <link name="pelvis_roll_plate_1_v1_1"/>
+        <link name="pelvis_roll_vplate_v1_1"/>
+        <link name="pelvis_base_1_v1_1"/>
+        <link name="nthigh_yaw_plate_3_v1_1"/>
+        <link name="nthigh_yaw_vsupport_v1_1"/>
+        <link name="nthigh_yaw_plate_1_v1_1"/>
+        <link name="thigh_roll_plate_2_v1_1"/>
+        <link name="thigh_roll_plate_1_v1_1"/>
+        <link name="nnThigh_Pitch_Plate_4_v1_1"/>
+        <link name="nnThigh_Pitch_Plate_v1_1"/>
+        <link name="knee_pitch_support_plate_1_v1_1"/>
+        <link name="tankle_pitch_support_plate_2_v1_1"/>
+        <link name="tankle_pitch_middle_support_v1_1"/>
+        <link name="tankle_pitchplate_2_v1_1"/>
+        <link name="mankle_right_pitch_plate_1_v1_1"/>
+        <link name="nankle_roll_plate_1_v1_1"/>
+        <link name="mankle_pitch_plate_1_v1_1"/>
+        <link name="tankle_roll_horiz_plate_v1_1"/>
+        <link name="tankle_vsupport_plate_v1_1"/>
+        <link name="heel_v1_1"/>
+        <link name="toe_v1_1"/>
+        <link name="nankle_roll_plate_2_v1_1"/>
+        <link name="nankle_roll_plate_3_v1_1"/>
+        <link name="tankle_pitch_middle_support_v1__1__1"/>
+        <link name="knee_pitch_middle_support_v1_1"/>
+        <link name="nnknee_pitch_plate_1_v1_1"/>
+        <link name="knee_pitch_middle_support_v1__1__1"/>
+        <link name="nnThigh_Pitch_Plate_2_v1_1"/>
+        <link name="nnThigh_Pitch_Plate_3_v1_1"/>
+        <link name="thigh_roll_plate_3_v1_1"/>
+        <link name="nthigh_yaw_vsupport_v1__1__1"/>
+        <link name="nthigh_yaw_plate_3_v1__1__1"/>
+        <link name="nthigh_yaw_vsupport_v1__2__1"/>
+        <link name="nthigh_yaw_plate_1_v1__1__1"/>
+        <link name="thigh_roll_plate_2_v1__2__1"/>
+        <link name="thigh_roll_plate_1_v1__1__1"/>
+        <link name="nnThigh_Pitch_Plate_4_v1__1__1"/>
+        <link name="nnThigh_Pitch_Plate_2_v1__1__1"/>
+        <link name="nnThigh_Pitch_Plate_3_v1__1__1"/>
+        <link name="nnThigh_Pitch_Plate_v1__1__1"/>
+        <link name="knee_pitch_support_plate_1_v1__1__1"/>
+        <link name="tankle_pitch_support_plate_2_v1__1__1"/>
+        <link name="tankle_pitch_middle_support_v1__2__1"/>
+        <link name="tankle_pitch_middle_support_v1__3__1"/>
+        <link name="tankle_pitchplate_2_v1__1__1"/>
+        <link name="mankle_right_pitch_plate_1_v1__1__1"/>
+        <link name="nankle_roll_plate_1_v1__1__1"/>
+        <link name="mankle_pitch_plate_1_v1__1__1"/>
+        <link name="tankle_roll_horiz_plate_v1__1__1"/>
+        <link name="tankle_vsupport_plate_v1__1__1"/>
+        <link name="heel_v1__1__1"/>
+        <link name="toe_v1__1__1"/>
+        <link name="nankle_roll_plate_2_v1__1__1"/>
+        <link name="nankle_roll_plate_3_v1__1__1"/>
+        <link name="knee_pitch_middle_support_v1__2__1"/>
+        <link name="nnknee_pitch_plate_1_v1__1__1"/>
+        <link name="knee_pitch_middle_support_v1__3__1"/>
+        <link name="thigh_roll_plate_3_v1__1__1"/>
+        <link name="nthigh_yaw_vsupport_v1__3__1"/>
+        <link name="pelvis_roll_plate_3_v1_1"/>
+        <link name="pelvis_roll_vplate_2_v1_1"/>
+        <link name="pelvis_base_1_v1__1__1"/>
+        <link name="nnPelvis_Pitch_VSupp_v1__1__1"/>
+        <link name="nnPelvis_Pitch_VSupp_2_v1_1"/>
+        <link name="nnPelvis_Pitch_VSupp_2_v1__1__1"/>
+        <link name="nnnPelvis_Yaw_Plate_3_v1_1"/>
+        <link name="nnPelvis_Yaw_VSupp_v1_1"/>
+        <joint name="Rev16"/>
+        <joint name="Rev19"/>
+        <joint name="Rev30"/>
+        <joint name="Rev33"/>
+        <joint name="Rev37"/>
+        <joint name="Rev41"/>
+        <joint name="Rev45"/>
+        <joint name="Rev49"/>
+        <joint name="Rev53"/>
+        <joint name="Rev58"/>
+        <joint name="Rev61"/>
+        <joint name="Rev65"/>
+        <joint name="Rev69"/>
+        <joint name="Rev73"/>
+        <joint name="Rev77"/>
+        <joint name="Rev82"/>
+        <joint name="Rev81"/>
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="lift" group="Legs">
+        <joint name="Rev16" value="0"/>
+        <joint name="Rev19" value="0"/>
+        <joint name="Rev30" value="0"/>
+        <joint name="Rev33" value="0"/>
+        <joint name="Rev37" value="0.3298"/>
+        <joint name="Rev41" value="0.1909"/>
+        <joint name="Rev45" value="-0.063"/>
+        <joint name="Rev49" value="-0.129"/>
+        <joint name="Rev53" value="0.2256"/>
+        <joint name="Rev58" value="0"/>
+        <joint name="Rev61" value="0"/>
+        <joint name="Rev65" value="0"/>
+        <joint name="Rev69" value="-0.1215"/>
+        <joint name="Rev73" value="0.1909"/>
+        <joint name="Rev77" value="0"/>
+        <joint name="Rev81" value="0"/>
+        <joint name="Rev82" value="0"/>
+    </group_state>
+    <group_state name="Stand" group="Legs">
+        <joint name="Rev16" value="0"/>
+        <joint name="Rev19" value="0"/>
+        <joint name="Rev30" value="0"/>
+        <joint name="Rev33" value="0"/>
+        <joint name="Rev37" value="0"/>
+        <joint name="Rev41" value="0"/>
+        <joint name="Rev45" value="0"/>
+        <joint name="Rev49" value="0"/>
+        <joint name="Rev53" value="0"/>
+        <joint name="Rev58" value="0"/>
+        <joint name="Rev61" value="0"/>
+        <joint name="Rev65" value="0"/>
+        <joint name="Rev69" value="0"/>
+        <joint name="Rev73" value="0"/>
+        <joint name="Rev77" value="0"/>
+        <joint name="Rev81" value="0"/>
+        <joint name="Rev82" value="0"/>
+    </group_state>
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+    <end_effector name="foot1" parent_link="toe_v1__1__1" group="Legs"/>
+    <end_effector name="foot2" parent_link="toe_v1_1" group="Legs"/>
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="floating_frame" type="floating" parent_frame="base_link" child_link="base_link"/>
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="base_link" link2="nnPelvis_Pitch_VSupp_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="nnPelvis_Pitch_VSupp_2_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="nnPelvis_Pitch_VSupp_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="nnPelvis_Pitch_VSupp_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="nnPelvis_Yaw_VSupp_v1_1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="nnPelvis_Yaw_VSupp_v1__1__1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="nnnPelvis_Yaw_Plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="nnnPelvis_Yaw_Plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="pelvis_pitch_plate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="pelvis_pitch_plate_3_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="base_link" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="heel_v1_1" link2="knee_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="heel_v1_1" link2="knee_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="heel_v1_1" link2="mankle_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="heel_v1_1" link2="mankle_right_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="heel_v1_1" link2="nankle_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="heel_v1_1" link2="nankle_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="heel_v1_1" link2="nankle_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="heel_v1_1" link2="tankle_roll_horiz_plate_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="heel_v1_1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="heel_v1_1" link2="toe_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="heel_v1__1__1" link2="knee_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="heel_v1__1__1" link2="knee_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="heel_v1__1__1" link2="mankle_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="heel_v1__1__1" link2="mankle_right_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="heel_v1__1__1" link2="nankle_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="heel_v1__1__1" link2="nankle_roll_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="heel_v1__1__1" link2="nankle_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="heel_v1__1__1" link2="tankle_roll_horiz_plate_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="heel_v1__1__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="heel_v1__1__1" link2="toe_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="knee_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="knee_pitch_support_plate_1_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="mankle_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="mankle_right_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nankle_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nankle_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nankle_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nnThigh_Pitch_Plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nnThigh_Pitch_Plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nnThigh_Pitch_Plate_4_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nnknee_pitch_plate_1_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="tankle_pitch_support_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="tankle_roll_horiz_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="knee_pitch_support_plate_1_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="mankle_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="mankle_right_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nankle_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nankle_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nankle_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nnThigh_Pitch_Plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nnThigh_Pitch_Plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nnThigh_Pitch_Plate_4_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nnknee_pitch_plate_1_v1_1" reason="Default"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="tankle_pitch_support_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="tankle_roll_horiz_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__1__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="knee_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="knee_pitch_support_plate_1_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="mankle_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="mankle_right_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nankle_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nankle_roll_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nankle_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nnThigh_Pitch_Plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nnThigh_Pitch_Plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nnThigh_Pitch_Plate_4_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nnknee_pitch_plate_1_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="tankle_roll_horiz_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__2__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="knee_pitch_support_plate_1_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="mankle_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="mankle_right_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nankle_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nankle_roll_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nankle_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nnThigh_Pitch_Plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nnThigh_Pitch_Plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nnThigh_Pitch_Plate_4_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nnknee_pitch_plate_1_v1__1__1" reason="Default"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="tankle_roll_horiz_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_middle_support_v1__3__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1_1" link2="mankle_right_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1_1" link2="nnThigh_Pitch_Plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1_1" link2="nnThigh_Pitch_Plate_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1_1" link2="nnknee_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1_1" link2="tankle_pitch_support_plate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1_1" link2="tankle_pitchplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1__1__1" link2="mankle_right_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1__1__1" link2="nnThigh_Pitch_Plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1__1__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1__1__1" link2="nnknee_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1__1__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="knee_pitch_support_plate_1_v1__1__1" link2="tankle_pitchplate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1_1" link2="mankle_right_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1_1" link2="nankle_roll_plate_1_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1_1" link2="nankle_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1_1" link2="nankle_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1_1" link2="tankle_roll_horiz_plate_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1_1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1_1" link2="toe_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1__1__1" link2="mankle_right_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1__1__1" link2="nankle_roll_plate_1_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1__1__1" link2="nankle_roll_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1__1__1" link2="nankle_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1__1__1" link2="tankle_roll_horiz_plate_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1__1__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_pitch_plate_1_v1__1__1" link2="toe_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="nankle_roll_plate_1_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="nankle_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="nankle_roll_plate_3_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="nnThigh_Pitch_Plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="tankle_pitch_support_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="tankle_pitchplate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1_1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="nankle_roll_plate_1_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="nankle_roll_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="nankle_roll_plate_3_v1__1__1" reason="Default"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="nnThigh_Pitch_Plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="tankle_pitchplate_2_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="mankle_right_pitch_plate_1_v1__1__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="nankle_roll_plate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="nankle_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="nnThigh_Pitch_Plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="tankle_pitch_support_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="tankle_roll_horiz_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1_1" link2="toe_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="nankle_roll_plate_2_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="nankle_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="nnThigh_Pitch_Plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="tankle_roll_horiz_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_1_v1__1__1" link2="toe_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="nankle_roll_plate_3_v1_1" reason="Default"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="nnThigh_Pitch_Plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="nnknee_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="tankle_pitch_support_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="tankle_pitchplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="tankle_roll_horiz_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1_1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="nankle_roll_plate_3_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="nnThigh_Pitch_Plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="nnknee_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="tankle_pitchplate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="tankle_roll_horiz_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_2_v1__1__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1_1" link2="nnThigh_Pitch_Plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1_1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1_1" link2="tankle_pitch_support_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1_1" link2="tankle_roll_horiz_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1_1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1__1__1" link2="nnThigh_Pitch_Plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1__1__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1__1__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1__1__1" link2="tankle_roll_horiz_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nankle_roll_plate_3_v1__1__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="nnPelvis_Pitch_VSupp_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="nnPelvis_Pitch_VSupp_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="nnPelvis_Pitch_VSupp_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="nnPelvis_Yaw_VSupp_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="nnPelvis_Yaw_VSupp_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="nnnPelvis_Yaw_Plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="nnnPelvis_Yaw_Plate_3_v1_1" reason="Default"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="nnPelvis_Pitch_VSupp_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="nnPelvis_Pitch_VSupp_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="nnPelvis_Yaw_VSupp_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="nnPelvis_Yaw_VSupp_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="nnnPelvis_Yaw_Plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="nnnPelvis_Yaw_Plate_3_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_2_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="nnPelvis_Pitch_VSupp_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="nnPelvis_Yaw_VSupp_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="nnPelvis_Yaw_VSupp_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="nnThigh_Pitch_Plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="nnThigh_Pitch_Plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="nnThigh_Pitch_Plate_4_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="nnThigh_Pitch_Plate_4_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="nnnPelvis_Yaw_Plate_1_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="nnnPelvis_Yaw_Plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="pelvis_base_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="nnPelvis_Yaw_VSupp_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="nnPelvis_Yaw_VSupp_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="nnThigh_Pitch_Plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="nnThigh_Pitch_Plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="nnThigh_Pitch_Plate_4_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="nnThigh_Pitch_Plate_4_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="nnnPelvis_Yaw_Plate_1_v1_1" reason="Default"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="nnnPelvis_Yaw_Plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="pelvis_base_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Pitch_VSupp_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="nnPelvis_Yaw_VSupp_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="nnnPelvis_Yaw_Plate_1_v1_1" reason="Default"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="nnnPelvis_Yaw_Plate_3_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="nnnPelvis_Yaw_Plate_1_v1_1" reason="Default"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="nnnPelvis_Yaw_Plate_3_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnPelvis_Yaw_VSupp_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nnThigh_Pitch_Plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nnThigh_Pitch_Plate_3_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nnThigh_Pitch_Plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nnThigh_Pitch_Plate_4_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nnThigh_Pitch_Plate_4_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nnknee_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="tankle_pitch_support_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nnThigh_Pitch_Plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nnThigh_Pitch_Plate_3_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nnThigh_Pitch_Plate_4_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nnThigh_Pitch_Plate_4_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nnknee_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_2_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nnThigh_Pitch_Plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nnThigh_Pitch_Plate_4_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nnThigh_Pitch_Plate_4_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nnThigh_Pitch_Plate_v1_1" reason="Default"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nnThigh_Pitch_Plate_4_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nnThigh_Pitch_Plate_4_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Default"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_3_v1__1__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nnThigh_Pitch_Plate_4_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nnThigh_Pitch_Plate_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nnThigh_Pitch_Plate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="thigh_roll_plate_1_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_4_v1__1__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nnThigh_Pitch_Plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nnknee_pitch_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="tankle_pitchplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="nnknee_pitch_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="tankle_pitchplate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnThigh_Pitch_Plate_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnknee_pitch_plate_1_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="nnknee_pitch_plate_1_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnknee_pitch_plate_1_v1_1" link2="tankle_pitch_support_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnknee_pitch_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnknee_pitch_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnknee_pitch_plate_1_v1__1__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="nnnPelvis_Yaw_Plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="nthigh_yaw_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_1_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_3_v1_1" link2="pelvis_base_1_v1_1" reason="Default"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_3_v1_1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_3_v1_1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_3_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_3_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_3_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_3_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nnnPelvis_Yaw_Plate_3_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="nthigh_yaw_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="nthigh_yaw_vsupport_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="pelvis_base_1_v1__1__1" reason="Default"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="tankle_pitch_middle_support_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="nthigh_yaw_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="pelvis_base_1_v1__1__1" reason="Default"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="thigh_roll_plate_2_v1__2__1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_1_v1__1__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="nthigh_yaw_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="nthigh_yaw_vsupport_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="pelvis_base_1_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="pelvis_base_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="nthigh_yaw_vsupport_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="pelvis_base_1_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="pelvis_base_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_plate_3_v1__1__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="nthigh_yaw_vsupport_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="pelvis_base_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="nthigh_yaw_vsupport_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="pelvis_base_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__1__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="nthigh_yaw_vsupport_v1__3__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="pelvis_base_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__2__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="pelvis_base_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="pelvis_base_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="nthigh_yaw_vsupport_v1__3__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="pelvis_base_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1__1__1" link2="pelvis_pitch_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1__1__1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1__1__1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1__1__1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1__1__1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1__1__1" link2="pelvis_roll_vplate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="pelvis_base_1_v1__1__1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_base_1_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Default"/>
+    <disable_collisions link1="pelvis_base_1_v1__1__1" link2="thigh_roll_plate_2_v1__2__1" reason="Default"/>
+    <disable_collisions link1="pelvis_pitch_plate_2_v1_1" link2="pelvis_pitch_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_2_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_2_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_2_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_2_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_2_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_3_v1_1" link2="pelvis_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_3_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_3_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_3_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_pitch_plate_3_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="pelvis_roll_plate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_1_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_2_v1_1" link2="pelvis_roll_plate_3_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="pelvis_roll_plate_2_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Default"/>
+    <disable_collisions link1="pelvis_roll_plate_2_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Default"/>
+    <disable_collisions link1="pelvis_roll_plate_3_v1_1" link2="pelvis_roll_vplate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="pelvis_roll_plate_3_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_3_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_3_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_3_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_plate_3_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_vplate_2_v1_1" link2="pelvis_roll_vplate_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_vplate_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_vplate_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_vplate_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_vplate_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_vplate_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="pelvis_roll_vplate_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1_1" link2="tankle_pitch_middle_support_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1_1" link2="tankle_pitch_support_plate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1_1" link2="tankle_pitchplate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1_1" link2="tankle_roll_horiz_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1_1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1_1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__1__1" link2="tankle_pitch_support_plate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__1__1" link2="tankle_pitchplate_2_v1_1" reason="Default"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__1__1" link2="tankle_roll_horiz_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__1__1" link2="tankle_vsupport_plate_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__1__1" link2="thigh_roll_plate_1_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__2__1" link2="tankle_pitch_middle_support_v1__3__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__2__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__2__1" link2="tankle_pitchplate_2_v1__1__1" reason="Default"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__2__1" link2="tankle_roll_horiz_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__2__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__2__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__2__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__2__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__3__1" link2="tankle_pitch_support_plate_2_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__3__1" link2="tankle_pitchplate_2_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__3__1" link2="tankle_roll_horiz_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__3__1" link2="tankle_vsupport_plate_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__3__1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__3__1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_middle_support_v1__3__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_support_plate_2_v1_1" link2="tankle_pitchplate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="tankle_pitch_support_plate_2_v1__1__1" link2="tankle_pitchplate_2_v1__1__1" reason="Never"/>
+    <disable_collisions link1="tankle_roll_horiz_plate_v1_1" link2="tankle_vsupport_plate_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="tankle_roll_horiz_plate_v1__1__1" link2="tankle_vsupport_plate_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="thigh_roll_plate_1_v1_1" link2="thigh_roll_plate_1_v1__1__1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_1_v1_1" link2="thigh_roll_plate_2_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="thigh_roll_plate_1_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_1_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_1_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_1_v1__1__1" link2="thigh_roll_plate_2_v1_1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_1_v1__1__1" link2="thigh_roll_plate_2_v1__2__1" reason="Adjacent"/>
+    <disable_collisions link1="thigh_roll_plate_1_v1__1__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_1_v1__1__1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_2_v1_1" link2="thigh_roll_plate_2_v1__2__1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_2_v1_1" link2="thigh_roll_plate_3_v1_1" reason="Adjacent"/>
+    <disable_collisions link1="thigh_roll_plate_2_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_2_v1__2__1" link2="thigh_roll_plate_3_v1_1" reason="Never"/>
+    <disable_collisions link1="thigh_roll_plate_2_v1__2__1" link2="thigh_roll_plate_3_v1__1__1" reason="Adjacent"/>
+    <disable_collisions link1="thigh_roll_plate_3_v1_1" link2="thigh_roll_plate_3_v1__1__1" reason="Never"/>
+</robot>

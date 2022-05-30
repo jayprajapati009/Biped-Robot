@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: 14dofbiped_description
+    relative_path: urdf/14dofbiped.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/14dofbiped.srdf
+  CONFIG:
+    author_name: Jay
+    author_email: Jprocks990@gmail.com
+    generated_timestamp: 1635423292

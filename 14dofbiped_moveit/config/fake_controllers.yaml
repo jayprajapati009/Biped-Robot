@@ -1,0 +1,24 @@
+controller_list:
+  - name: fake_Legs_controller
+    type: $(arg execution_type)
+    joints:
+      - Rev16
+      - Rev19
+      - Rev30
+      - Rev33
+      - Rev37
+      - Rev41
+      - Rev45
+      - Rev49
+      - Rev53
+      - Rev58
+      - Rev61
+      - Rev65
+      - Rev69
+      - Rev73
+      - Rev77
+      - Rev81
+      - Rev82
+initial:  # Define initial robot poses.
+  - group: Legs
+    pose: lift
